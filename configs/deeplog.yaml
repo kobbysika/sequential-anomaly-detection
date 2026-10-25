@@ -1,1 +1,16 @@
 
+{
+  "name": "deeplog",
+  "seed": 42,
+  "paths": {
+    "dataset_root": "datasets/processed/unsw-nb15",
+    "results_root": "results/runs/deeplog",
+    "artifacts_root": "artifacts/checkpoints/deeplog"
+  },
+  "preprocessing": {
+    "window_minutes": 15,
+    "sequence_length": 10,
+    "keyset": 0,
+    "packet_divisor": 100
+  }
+}
