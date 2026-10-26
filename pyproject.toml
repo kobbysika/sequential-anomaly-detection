@@ -1,1 +1,31 @@
 
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sequential-anomaly-detection"
+version = "0.1.0"
+description = "Reproducible Chapter 4 sequential anomaly-detection experiments"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = []
+
+[project.optional-dependencies]
+training = [
+  "tensorflow>=2.16,<2.22",
+  "matplotlib>=3.7,<4"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.coverage.run]
+source = ["sequential_anomaly"]
+
+[tool.coverage.report]
+show_missing = true
